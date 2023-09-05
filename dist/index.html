@@ -8,19 +8,61 @@
   <body>
     <script type="module" src="bundle.js" defer></script>
 
-    <div id="menu" class="h-96 w-full bg-slate-500"></div>
+    <!-- drop down menu -->
+    <div id="menu_background" class="h-80 w-full bg-slate-900">
+      <div id="menu" class="group flex h-10 w-40 flex-col bg-white">
+        Components
+        <div
+          id="shifters"
+          class="tab hidden bg-white hover:block group-hover:block"
+        >
+          Shifters
+        </div>
+        <div
+          id="brakes"
+          class="tab hidden bg-white hover:block group-hover:block"
+        >
+          Brakes
+        </div>
+      </div>
+    </div>
 
+    <!-- mobile menu -->
+
+    <!-- image slider -->
+    <div id="image_grid" class="grid grid-cols-4 bg-black">
+      <div id="image_left" class="z-10 bg-black"></div>
+      <div
+        id="image_track"
+        class="z-0 col-span-2 col-start-2 flex -translate-x-0 transition-transform"
+      >
+        <img src="images/P1000366.JPG" />
+        <img src="images/P1000377.JPG" />
+        <img src="images/P1000456.JPG" />
+      </div>
+      <div id="image_right" class="z-10 bg-black"></div>
+    </div>
+
+    <!-- form validation -->
+    <!-- api practice -->
     <button
-      id="button"
+      id="snake_button"
       class="border-2 border-dotted border-blue-950 hover:drop-shadow-md"
     >
       New Snake Image
     </button>
 
-    <img id="snake_img" class="h-48 w-48" />
+    <button
+      id="cat_button"
+      class="border-2 border-dotted border-blue-950 hover:drop-shadow-md"
+    >
+      New Cat Image
+    </button>
+
+    <img id="img" class="h-48 w-48" />
 
     <div class="flex flex-col">
-      <label for="giph_search">giph search:</label>
+      <label for="search_box">giph search:</label>
       <input type="text" id="search_box" class="border-2 border-black" />
       <button
         id="search_submit"
